@@ -21,14 +21,14 @@ namespace Allocations {
 template <typename Offset>
 class TaggerRunner {
  public:
-  typedef Finder<Offset> Finder;
+  typedef Allocations::Finder<Offset> Finder;
   typedef typename Finder::AllocationIndex AllocationIndex;
   typedef typename Finder::Allocation Allocation;
-  typedef Tagger<Offset> Tagger;
+  typedef Allocations::Tagger<Offset> Tagger;
   typedef typename Tagger::Pass Pass;
   typedef typename Tagger::Phase Phase;
-  typedef TagHolder<Offset> TagHolder;
-  typedef SignatureDirectory<Offset> SignatureDirectory;
+  typedef Allocations::TagHolder<Offset> TagHolder;
+  typedef Allocations::SignatureDirectory<Offset> SignatureDirectory;
   typedef typename VirtualAddressMap<Offset>::Reader Reader;
 
   TaggerRunner(const Finder& finder, const TagHolder& tagHolder,
